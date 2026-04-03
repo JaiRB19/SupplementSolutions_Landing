@@ -1,0 +1,186 @@
+/* =========================================================================
+   PREMIUM STYLES FOR SUPPLEMENT SOLUTIONS
+   ========================================================================= */
+
+:root {
+    --text-color: #334155;
+    --text-muted: #64748b;
+    --primary-color: #0F172A; /* Deep Blue */
+    --accent-color: #F97316; /* Vibrant Orange */
+    --bg-light: #F8FAFC;
+    
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    
+    --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-color);
+    background-color: var(--bg-light);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--primary-color);
+    letter-spacing: -0.02em;
+}
+
+/* =========================================================================
+   NAVBAR GLASSMORPHISM
+   ========================================================================= */
+
+/* Top bar with contacts */
+#templatemo_nav_top {
+    background-color: #0f172a !important; /* Mantenemos un azul noche muy oscuro */
+    font-size: 0.8rem;
+    padding: 10px 0;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+#templatemo_nav_top a {
+    transition: all 0.3s ease;
+    letter-spacing: 0.05em;
+}
+
+#templatemo_nav_top a:hover {
+    color: var(--accent-color) !important;
+    text-shadow: 0 0 8px rgba(249, 115, 22, 0.4);
+}
+
+#templatemo_nav_top i {
+    transition: all 0.3s ease;
+}
+
+#templatemo_nav_top a:hover i {
+    transform: scale(1.15) translateY(-2px);
+    color: var(--accent-color);
+    text-shadow: 0 0 10px rgba(249, 115, 22, 0.5);
+}
+
+/* Main Navbar */
+.navbar.shadow {
+    box-shadow: none !important;
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.navbar .nav-link {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--primary-color) !important;
+    font-size: 0.95rem;
+    margin: 0 10px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+/* Underline animation on hover */
+.navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--accent-color);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navbar .nav-link:hover::after {
+    width: 100%;
+}
+
+/* =========================================================================
+   HERO BANNER
+   ========================================================================= */
+.carousel-inner .carousel-item img {
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-hover);
+    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Slightly zoom background images on hover for a premium feel */
+.carousel-inner .carousel-item:hover img {
+    transform: scale(1.02);
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: var(--primary-color);
+    opacity: 0.4;
+    transition: opacity 0.3s ease, width 0.3s ease;
+}
+
+.carousel-indicators .active {
+    background-color: var(--accent-color);
+    opacity: 1;
+    width: 40px;
+}
+
+/* =========================================================================
+   VALORES (CATEGORIES)
+   ========================================================================= */
+.rounded-circle.img-fluid.border {
+    border-color: transparent !important;
+    box-shadow: var(--shadow-hover);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.rounded-circle.img-fluid.border:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* =========================================================================
+   BUTTONS
+   ========================================================================= */
+.btn-primary, .btn-success {
+    background-color: var(--accent-color) !important;
+    border: none !important;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    border-radius: 30px;
+    padding: 10px 24px;
+    box-shadow: 0 4px 14px 0 rgba(249, 115, 22, 0.39);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover, .btn-success:hover {
+    background-color: #ea580c !important;
+    box-shadow: 0 6px 20px rgba(249, 115, 22, 0.23);
+    transform: translateY(-2px);
+}
+
+/* =========================================================================
+   ANIMATIONS (General utilities)
+   ========================================================================= */
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

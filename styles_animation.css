@@ -1,0 +1,27 @@
+
+#Titulo_V .letra {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-100PX);
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+#informacion {
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateX(100%); /* Oculto a la derecha */
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+#valor1 #informacion {
+    transform: translateX(-100PX);
+}
+
+#valor2 #informacion {
+    opacity: 0;
+    transform: translateY(100%); /* Oculto abajo */
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+#valor3 #informacion {
+    transform: translateX(100%);
+}
