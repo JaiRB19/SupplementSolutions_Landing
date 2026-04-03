@@ -53,4 +53,4 @@ Al ser primariamente un conjunto estático de Front-End, no requiere de una inst
 3. *Nota*: Para que `send_email.php` funcione, el proyecto debe montarse utilizando un servidor apache local (como XAMPP, WAMP o Laragon) o un servidor web.
 
 ---
-*Hecho por [Tu Nombre] para Supplement Solutions.* 
+*Hecho por Jaiel Ortiz & Jorge Matu para Supplement Solutions.* 
